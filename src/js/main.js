@@ -174,5 +174,5 @@ controlNavbar();
 
 
 function updateLink(par){
-    downloadInput.value = `${URL}/${par}/.css`;
+    downloadInput.value = `${URL}/${par}.css`;
 }
