@@ -1,0 +1,220 @@
+$btnfont-1: 'Poppins', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.max-800 {
+    max-width: 1050px;
+    width: 95%;
+}
+
+.shadow {
+    &-1 {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+}
+
+.container__icons {
+    @extend .max-800;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    justify-content: space-between;
+    gap: 50px;
+
+    @media only screen and (max-width: 900px) {
+        grid-template-columns: repeat(5, 100px);
+    }
+
+    @media only screen and (max-width: 760px) {
+        grid-template-columns: repeat(4, 100px);
+    }
+
+    @media only screen and (max-width: 590px) {
+        grid-template-columns: repeat(3, 100px);
+    }
+
+    @media only screen and (max-width: 450px) {
+        grid-template-columns: repeat(1, 99%);
+
+        .icon {
+            width: 100%;
+        }
+    }
+
+}
+
+.icon {
+    font-size: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 12px;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    opacity: 1;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+
+    &--copy {
+        animation: fade-off 1.5s linear 0.5s forwards;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 1rem;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        z-index: 10;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    >i {
+        pointer-events: none;
+        transition: .3s ease opacity;
+    }
+
+    &::before {
+        content: attr(data-name);
+        text-align: center;
+        position: absolute;
+        z-index: 10;
+        border-radius: 12px;
+        opacity: 0;
+        font-size: .75rem;
+        padding: 10px;
+        transition: .3s ease opacity;
+    }
+
+    &:hover {
+        &>i {
+            opacity: 0;
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes fade-off {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+nav {
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+    position: sticky;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    border-bottom: 2px solid gainsboro;
+    padding: 10px 0;
+
+    .btn {
+        display: none;
+    }
+
+    button {
+        font-family: $btnfont-1;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        border-radius: 7px;
+        padding: 3px 10px;
+    }
+
+    .button--open {
+        background-color: var(--color);
+        color: white;
+    }
+
+    @media only screen and (max-width: 760px) {
+        padding-right: 2.5%;
+        justify-content: end;
+
+        .btn {
+            display: block;
+        }
+
+        .navbar {
+            z-index: 11;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: flex;
+            transition: .3s ease width;
+            top: 0;
+            left: 0;
+            position: fixed;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            height: 100vh;
+            button{
+                font-size: 2rem;
+                &:last-child{
+                    top: 50px;
+                    right: 50px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.go-top-button {
+    font-size: 1.25rem;
+    border: none;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    border-radius: 12px;
+    transition: .3s ease all;
+    animation: glide 2s infinite reverse linear;
+    opacity: 1;
+}
+
+@keyframes glide {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.navbar--open {
+    width: 100% !important;
+}

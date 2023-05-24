@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+        integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/icons/icons.css">
+    <link rel="stylesheet" href="./src/css/icons/icofont.css">
+    <title>Icons</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="navbar">
+            <button class="button--open" data-query="bootstrap" style="--color:#7532f8" type="button">Bootstrap</button>
+            <button data-query="fontawesome" style="--color:#74C0FC" type="button">Font Awesome</button>
+            <button data-query="lineicons" style="--color:rgb(100,102,254)" type="button">Line Icons</button>
+            <button data-query="icofont" style="--color:#03C2DA" type="button">IcoFont</button>
+            <button data-query="all" style="--color:#FBD43B" type="button">All</button>
+            <button id="navbarclose" class="btn btn-sm btn-outline-danger">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <button id="navbaropen" class="btn btn-primary">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </nav>
+    <div class="w-100 d-flex align-items-center flex-column justify-content-center my-5">
+        <label class="form-label max-800">
+            Download Link
+        </label>
+        <input id="downloadinput" value="Test" readonly placeholder="Search" type="text" class="shadow-1 max-800 form-control">
+    </div>
+    <div class="w-100 d-flex justify-content-center my-5">
+        <input id="searchInput" placeholder="Search" type="text" class="shadow-1 max-800 form-control">
+    </div>
+    <div class="container__icons mb-5">
+    </div>
+    <button id="nextbtn" class="mx-auto d-block my-3 max-800 btn btn-primary">
+        Next
+    </button>
+    <button class="opacity-0 go-top-button">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+    <script type="module" src="./src/js/main.js"></script>
+</body>
+
+</html>
