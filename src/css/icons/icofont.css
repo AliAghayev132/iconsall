@@ -3,8 +3,8 @@
   font-family: "IcoFont";
   font-weight: normal;
   font-style: "Regular";
-  src: url("/src/fonts/icofont.woff2") format("woff2"),
-    url("/src/fonts/icofont.woff") format("woff");
+  src: url("./src/fonts/icofont.woff2") format("woff2"),
+    url("./src/fonts/icofont.woff") format("woff");
 }
 
 [class^="icofont-"],
