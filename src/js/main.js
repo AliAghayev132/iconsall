@@ -1,4 +1,8 @@
+const URL = "https://aliaghayev132.github.io/iconsall/src/css/fonts";
+const downloadInput = document.getElementById("downloadinput");
+
 let query = "bootstrap";
+updateLink(query);
 const icons = {
     bootstrap: [],
     fontawesome: [],
@@ -75,6 +79,7 @@ nav.addEventListener("click", async (e) => {
         window.scroll(0, 0);
         searchInput.value = "";
         query = e.target.dataset.query;
+        updateLink(query);
         if (query == "all") {
             if (icons.all.length == 0) {
                 const iconPromises = [];
@@ -166,3 +171,8 @@ btnUp.addEventListener("click", () => window.scroll(0, 0));
 
 import controlNavbar from './navbar.js';
 controlNavbar();
+
+
+function updateLink(par){
+    downloadInput.value = `${URL}/${par}/.css`;
+}
