@@ -121,7 +121,7 @@ function loadIcons(par) {
 }
 
 async function getIcons(par) {
-    const response = await fetch(`../../db/${par}.json`)
+    const response = await fetch(`/db/${par}.json`)
 
     return await response.json();
 }
