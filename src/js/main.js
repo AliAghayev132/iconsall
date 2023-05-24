@@ -1,4 +1,4 @@
-const URL = "https://aliaghayev132.github.io/iconsall/src/css/fonts";
+const URL = "https://aliaghayev132.github.io/iconsall/src/css/icons";
 const downloadInput = document.getElementById("downloadinput");
 
 let query = "bootstrap";
