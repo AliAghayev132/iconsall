@@ -103,7 +103,7 @@ const goTopButton = document.querySelector(".go-top-button");
 goTopButton.addEventListener("click", goTop);
 
 (async function () {
-    const response = await fetch("../../icons.json")
+    const response = await fetch("./icons.json")
     const data = await response.json();
     for (let i = 0; i < data.length; ++i) {
         packageNames[data[i].key] = data[i].title;
