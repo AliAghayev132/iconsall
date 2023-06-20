@@ -7,24 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/icons/bootstrap.css">
     <link rel="stylesheet" href="./src/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./src/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/icons/lineicons.css">
     <link rel="stylesheet" href="./src/css/icons/icofont.css">
     <link rel="stylesheet" href="./src/css/icons/fontawesome.css">
-    <title>Icons</title>
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/icons/css.gg.css">
+    <link rel="stylesheet" href="./src/css/icons/remixicon.css">
+    <link rel="stylesheet" href="./src/css/icons/boxicons.css">
+    <link rel="icon" href="./src/img/logo.png">
+    <title>ICONS ALL</title>
 </head>
 
 <body>
     <nav id="nav">
-        <div class="navbar">
-            <button class="button--open" data-query="bootstrap" style="--color:#7532f8" type="button">Bootstrap</button>
-            <button data-query="fontawesome" style="--color:#74C0FC" type="button">Font Awesome</button>
-            <button data-query="lineicons" style="--color:rgb(100,102,254)" type="button">Line Icons</button>
-            <button data-query="icofont" style="--color:#03C2DA" type="button">IcoFont</button>
-            <button data-query="all" style="--color:#FBD43B" type="button">All</button>
+        <div id="navbar" class="navbar">
+            <button class="button--open" data-query="bootstrap" type="button">Bootstrap</button>
+            <button data-query="fontawesome" type="button">Font Awesome</button>
+            <button data-query="lineicons" type="button">Line Icons</button>
+            <button data-query="icofont" type="button">IcoFont</button>
+            <button data-query="cssgg" type="button">Css.gg</button>
+            <button data-query="boxicons" type="button">Box Icons</button>
+            <button data-query="remixicon" type="button">Remix Icons</button>
+            <button data-query="all" type="button">All</button>
             <button id="navbarclose" class="btn btn-sm btn-outline-danger">
                 <i class="bi bi-x-lg"></i>
             </button>
@@ -35,19 +42,24 @@
 
     </nav>
     <div class="w-100 d-flex align-items-center flex-column justify-content-center my-5">
-        <label class="form-label max-800">
-            Download Link
+        <label class="d-flex gap-2 align-items-center form-label max-800">
+            CDN Link
         </label>
-        <input id="downloadinput" value="Test" readonly placeholder="Search" type="text" class="shadow-1 max-800 form-control">
+        <input id="downloadinput" value="Test" readonly placeholder="Search" type="text"
+            class="shadow-1 max-800 form-control">
     </div>
     <div class="w-100 d-flex justify-content-center my-5">
-        <input id="searchInput" placeholder="Search" type="text" class="shadow-1 max-800 form-control">
+        <div class="max-800 d-flex align-items-center">
+            <input id="searchInput" placeholder="Search" type="text" class="shadow-1 form-control">
+        </div>
     </div>
-    <div class="container__icons mb-5">
+    <div id="all__section" class="w-100 d-flex d-none justify-content-center my-5">
+        <div class="max-800 d-flex gap-2 justify-content-center  flex-wrap  align-items-center">
+        </div>
     </div>
-    <button id="nextbtn" class="mx-auto d-block my-3 max-800 btn btn-primary">
-        Next
-    </button>
+    <div id="icon-container" class="container__icons mb-5"></div>
+    <div id="icon-all-container" class="mb-5"></div>
+
     <button class="opacity-0 go-top-button">
         <i class="bi bi-chevron-up"></i>
     </button>
