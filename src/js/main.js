@@ -22,7 +22,7 @@ const hideAllSection = () => allSection.classList.add("d-none");
 chooseQuery("bootstrap");
 const clearContainer = () => containerIcons.innerHTML = ""
 async function getIcons(par) {
-    const response = await fetch("../../db/" + par + ".json");
+    const response = await fetch("./db/" + par + ".json");
     return await response.json();
 }
 
