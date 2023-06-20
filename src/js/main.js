@@ -139,7 +139,7 @@ allSection.addEventListener("change", async function (e) {
 })
 
 async function fetchData(par) {
-    const response = await fetch(`../../db/${par}.json`);
+    const response = await fetch(`./db/${par}.json`);
     const data = await response.json();
     allpackages[par].data = data;
 }
