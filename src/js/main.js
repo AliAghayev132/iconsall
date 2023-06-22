@@ -75,7 +75,7 @@ navbar.addEventListener("click", function (e) {
 
 //? |||||||||| Search Event ||||||||||
 searchInput.addEventListener("input", ({ target }) => {
-    const value = target.value.toLowerCase();
+    const value = target.value.toLowerCase().trim();
     search(value);
 })
 
